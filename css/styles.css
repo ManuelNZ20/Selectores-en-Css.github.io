@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family:fantasy;
+  font-size: 16px;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgb(9, 135, 119), rgb(130, 240, 225));
+  display: flex;
+}
+main div.contenedor {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 60vw;
+  height: 35vh;
+  background-color: white;
+  margin: auto;
+  border-radius: 1em;
+  padding:1em;
+}
+.contenedor div.message {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.contenedor div.message img {
+  width: 20%;
+  height: 20vh;
+  object-fit: cover;
+}
+.contenedor div.message p span.frase {
+    font-style: italic;
+    font-family: cursive;
+    font-weight: 700;
+}
+.contenedor div.message p {
+    letter-spacing: 0.1em;
+}
+span.frase::before {
+    content:"\"";
+}
+
+span.frase::after {
+    content:"\". ";
+}
+
+.contenedor .example-hover {
+    margin: 2em 0em 0em;
+    width:40%;
+    height: 30%;
+}
+.contenedor .example-hover button {
+    width:90%;
+    height:80%;
+    background-color: rgb(8, 190, 166);
+    border:none;
+    border-radius: 0.5em;
+    font-family: fantasy;
+    letter-spacing: 0.1em;
+    color:rgba(75, 73, 73, 0.726);
+    cursor: pointer;
+}
+
+.contenedor .example-hover button:hover {
+    background-color:rgb(9, 135, 119);
+    color:rgba(255, 255, 255, 0.792);
+}
+
+.contenedor div.example-hover .content-example{
+    display: none;
+}
+.contenedor div.example-hover:hover {
+    display: block;
+}
+.contenedor .example-hover button#boton-principal::before{
+    content:"Pasa por encima";
+}
+.main:hover {
+  background: linear-gradient(rgb(2, 55, 48), rgb(130, 240, 225));
+}
